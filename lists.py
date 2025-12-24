@@ -25,11 +25,25 @@
 
 
 #----------sum of the lists---------
-lst = [[1,2],[3,4],[5,6]]
-total = 0
-lst2=[]
-for sub in lst:
-    for i in sub:
-        total += i
-    lst2.append(total)
-print(lst2)
+# lst = [[1,2],[3,4],[5,6]]
+# total = 0
+# lst2=[]
+# for sub in lst:
+#     for i in sub:
+#         total += i
+#     lst2.append(total)
+# print(lst2)
+
+#--------copy-------------
+import copy
+
+lst = [[1,2],[3,4]]
+shallow = lst.copy()
+deep = copy.deepcopy(lst)
+
+lst[0][0] = 100
+
+print("Original:", lst)
+print("Shallow:", shallow)
+print("Deep:", deep)
+
