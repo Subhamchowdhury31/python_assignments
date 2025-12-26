@@ -14,7 +14,12 @@ class Report:
             return
         
         marks_dict = mark(sid)
-        total_marks = sum(marks_dict.values()) if marks_dict else 0
+       
+        if marks_dict:
+             total_marks = sum(marks_dict.values()) 
+        else :
+            return 0
+        
         percent = percentage(total_marks, 300) 
 
         print("\n========== STUDENT REPORT ==========")
